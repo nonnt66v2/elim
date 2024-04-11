@@ -1,3 +1,5 @@
+riga di comando: g++ main.cpp -o main `pkg-config --cflags --libs opencv`
+
 ######## A simple cmakelists.txt file for OpenCV() #############  
 cmake_minimum_required(VERSION 3.5)
 PROJECT(es_3)

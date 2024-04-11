@@ -1,39 +1,41 @@
-//
-// Created by nonnt66 on 08/04/24.
-//
-// Description:
-#include "opencv2/imgcodecs.hpp"
-#include "opencv2/highgui.hpp"
 #include <iostream>
+#include "opencv4/opencv2/opencv.hpp"
+#include "opencv2/core/matx.hpp"
+#include <opencv2/core/types.hpp>
 
-// we're NOT "using namespace std;" here, to avoid collisions between the beta variable and std::beta in c++17
-using std::cin;
-using std::cout;
-using std::endl;
 using namespace cv;
+using namespace std;
 
+int main() {
 
-void cv::copyMakeBorder(
-        cv::InputArray src,
-        cv::OutputArray dst,
-        int top,
-        int bottom,
-        int left,
-        int right,
-        int borderType,
-        const cv::Scalar &value = cv::Scalar()
-);
+    int rows = 3;
+    int cols = 3;
+    cv::Mat m = cv::Mat::zeros(rows, cols, CV_32F);
+    cv::Mat m2;
+    cv::randu(m, 0.0f, 0.1f); // fill matrix with random values in range [-1.0, 1.0]
+//    std::cout << m << std::endl;
 
-int main(){
-    cv::Mat img = cv::imread("1.png", IMREAD_COLOR);
-    if(img.empty()){
-        cout << "Could not read the image: " << "1.png" << std::endl;
-        return 1;
+    std::cout<<m<<std::endl;
+    copyMakeBorder(m, m, 1, 1, 1, 1, cv::BORDER_CONSTANT, cv::Scalar(0));
+    std::cout<<m<<std::endl;
+    //Sostituire al valore di ogni pixel il valore medio dei livelli di grigio in un intorno 3x3
+
+    for (int i = 1; i < m.rows-1; i++) {
+        for (int j = 1; j < m.cols-1; j++) {
+            float sum = 0;
+            for (int k = -1; k < 2; k++) {
+                for (int l = -1; l < 2; l++) {
+                    sum += m.at<float>(i+k, j+l);
+                }
+            }
+            m.at<float>(i, j) = sum/9;
+        }
     }
-    cv::namedWindow("Display window", WINDOW_AUTOSIZE);
-    cv::imshow("Display window", img);
-    cv::waitKey(0);
+    std::cout<<m<<std::endl;
     return 0;
 
-}
 
+
+
+}
+// Compile: g++ main.cpp -o main `pkg-config --cflags --libs opencv4` && ./main
