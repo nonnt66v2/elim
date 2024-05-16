@@ -32,6 +32,8 @@ int main() {
         }
     }
     std::cout<<m<<std::endl;
+    cv::Canny(m, m2, 0.1, 0.2);
+    std::cout<<m2<<std::endl;
     return 0;
 
 
