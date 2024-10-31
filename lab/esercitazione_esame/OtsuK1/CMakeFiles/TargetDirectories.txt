@@ -1,0 +1,3 @@
+/home/nonnt66/Scaricati/uni/elim/lab/esercitazione_esame/OtsuK1/CMakeFiles/Otsu.dir
+/home/nonnt66/Scaricati/uni/elim/lab/esercitazione_esame/OtsuK1/CMakeFiles/edit_cache.dir
+/home/nonnt66/Scaricati/uni/elim/lab/esercitazione_esame/OtsuK1/CMakeFiles/rebuild_cache.dir

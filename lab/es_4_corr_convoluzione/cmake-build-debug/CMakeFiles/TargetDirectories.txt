@@ -1,3 +1,0 @@
-/home/nonnt66/Scaricati/uni/elim/lab/es_4_corr_convoluzione/cmake-build-debug/CMakeFiles/es_4.dir
-/home/nonnt66/Scaricati/uni/elim/lab/es_4_corr_convoluzione/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/nonnt66/Scaricati/uni/elim/lab/es_4_corr_convoluzione/cmake-build-debug/CMakeFiles/rebuild_cache.dir

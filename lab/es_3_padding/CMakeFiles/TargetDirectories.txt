@@ -1,3 +1,0 @@
-/home/nonnt66/Scaricati/uni/elim/lab/es_3/CMakeFiles/es_3.dir
-/home/nonnt66/Scaricati/uni/elim/lab/es_3/CMakeFiles/edit_cache.dir
-/home/nonnt66/Scaricati/uni/elim/lab/es_3/CMakeFiles/rebuild_cache.dir
